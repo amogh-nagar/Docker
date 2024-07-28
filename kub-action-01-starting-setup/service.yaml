@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: yaml-k8-service
+spec:
+  selector:
+    app: yaml-k8-app
+  ports:
+    - protocol: 'TCP'
+      port: 80
+      targetPort: 8080
+    # - protocol: 'TCP'
+    #   port: 435
+    #   targetPort: 435
+  type: LoadBalancer
